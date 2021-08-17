@@ -12,8 +12,8 @@ Takes a txt file with assembly code with the instruction set below and saves a c
 | 0100               | STA             | yes         | Store the contents of register A into the address of the operand                                                  |
 | 0101               | LDI             | yes         | Load immediate value of the operand into register A                                                               |
 | 0110               | JMP             | yes         | Jump to the memory address of the operand (aka code line)                                                         |
-| 0110               | JPC             | yes         | Jump to the memory address of the operand if last operation had a 9th bit carry                                   |
-| 0111               | JPZ             | yes         | Jump to the memory address of the operand if the last operation resulted in zero                                  |
+| 0111               | JPC             | yes         | Jump to the memory address of the operand if last operation had a 9th bit carry                                   |
+| 1000               | JPZ             | yes         | Jump to the memory address of the operand if the last operation resulted in zero                                  |
 | 1110               | OUT             | no          | Load contents of register A into output register                                                                  |
 | 1111               | HLT             | no          | Halt the system                                                                                                   |
 
