@@ -17,12 +17,32 @@ Takes a txt file with assembly code with the instruction set below and saves a c
 | 1110               | OUT             | no          | Load contents of register A into output register                                                                  |
 | 1111               | HLT             | no          | Halt the system                                                                                                   |
 
+**Line breaks are ignored, unkown opcodes are replaced with 0's amd no operand is also defaulted with 0's**
+
 ## Example input
 
 ```
-LDI 5
+LDA 14
+SUB 12
+JPC 6
+LDA 13
 OUT
 HLT
+STA 14
+LDA 13
+ADD 15
+STA 13
+JMP 0
+.
+1
+.
+
+
+
+
+
+5
+3
 ```
 
 ## Example output
@@ -30,7 +50,20 @@ HLT
 ```
 address: contents
 -----------------
-0000: 0101 0101
-0001: 1110 0000
-0010: 1111 0000
+0000: 0001 1110
+0001: 0011 1100
+0010: 0111 0110
+0011: 0001 1101
+0100: 1110 0000
+0101: 1111 0000
+0110: 0100 1110
+0111: 0001 1101
+1000: 0010 1111
+1001: 0100 1101
+1010: 0110 0000
+1011: 0000 0000
+1100: 0000 0001
+1101: 0000 0000
+1110: 0000 0101
+1111: 0000 0011
 ```
