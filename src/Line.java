@@ -15,11 +15,11 @@ public class Line {
 
     public Line(int address, int number) {
         if (number > 255 || operand < 0){
-            throw new IllegalArgumentException("number is not an unsigned byter");
+            throw new IllegalArgumentException("number is not an unsigned byte");
         }
         this.address = address;
         this.instruction = Opcode.NULL;
-        this.operand = 1111 & number;
+        this.operand = (byte) number & 0b00001111;
         this.number = number;
     }
 

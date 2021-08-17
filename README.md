@@ -17,7 +17,7 @@ Takes a txt file with assembly code with the instruction set below and saves a c
 | 1110               | OUT             | no          | Load contents of register A into output register                                                                  |
 | 1111               | HLT             | no          | Halt the system                                                                                                   |
 
-**Line breaks are ignored, unkown opcodes are replaced with 0's amd no operand is also defaulted with 0's**
+*Line breaks are ignored, unknown opcodes are replaced with 0's and no operand is also defaulted with 0's. Anything after the operand (or opcode if there's no operand) is ignored (i.e. comments)*
 
 ## Example input
 
@@ -26,7 +26,7 @@ LDA 14
 SUB 12
 JPC 6
 LDA 13
-OUT
+OUT // show on 7-segment display
 HLT
 STA 14
 LDA 13
@@ -41,7 +41,7 @@ JMP 0
 
 
 
-5
+250
 3
 ```
 
@@ -64,6 +64,6 @@ address: contents
 1011: 0000 0000
 1100: 0000 0001
 1101: 0000 0000
-1110: 0000 0101
+1110: 1111 1010
 1111: 0000 0011
 ```
