@@ -17,3 +17,18 @@ Takes a txt file with assembly code with the instruction set below and saves a c
 | 1110               | OUT             | no          | Load contents of register A into output register                                                                  |
 | 1111               | HLT             | no          | Halt the system                                                                                                   |
 
+## Example input
+
+```
+LDI 5
+OUT
+HLT
+```
+
+## Example output
+
+```
+0000: 0101 0101
+0001: 1110 0000
+0010: 1111 0000
+```
