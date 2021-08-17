@@ -28,8 +28,8 @@ HLT
 ## Example output
 
 ```
-#address: contents
-------------------
+address: contents
+-----------------
 0000: 0101 0101
 0001: 1110 0000
 0010: 1111 0000
