@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,8 +19,8 @@ public class Program {
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder("address: contents\n" +
-                "-----------------\n");
+        StringBuilder result = new StringBuilder("address: contents    # assembly\n" +
+                "---------------------------------\n");
         for (Line l : lines) {
             result.append(l.toString() + "\n");
         }
@@ -45,6 +47,18 @@ public class Program {
                 }
                 addLine(new Line(getLines(), instruction, operand));
             }
+        }
+    }
+
+    public void writeFile(String outputFileName) {
+        try {
+            PrintWriter writer = new PrintWriter(outputFileName + ".txt");
+            StringBuilder file = new StringBuilder(this.toString());
+            writer.print(file);
+            writer.close();
+            System.out.println("Saved as " + outputFileName + ".txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("Output file could not be saved. " + e.getMessage());
         }
     }
 }
