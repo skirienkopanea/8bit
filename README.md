@@ -1,5 +1,5 @@
 # 8bit
-[Ben Eater 8 bit computer](https://eater.net/8bit/) assembly compiler in java.
+[Ben Eater 8 bit computer](https://skirienkopanea.github.io/8bit) assembly compiler in java.
 
 Takes a .txt file (first argument) in the same directory as the program and if the output name argument (second) is given saves the binary compiled output in the same directory as a .txt file. Eitherway the compiled binary code is always shown in the terminal. The input must be written in assembly code with the instruction set below.
 
